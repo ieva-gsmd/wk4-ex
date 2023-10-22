@@ -1,31 +1,32 @@
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(600, 600);
   background(0);
 }
 
 function draw() {
 
   if (mouseIsPressed) {
-    // mySquares(mouseX, mouseY, 20, 20);
-    translate(mouseX, mouseY);
-    squareInside(0, 0);
+     mySquares(mouseX, mouseY, 20, 20);
+    // translate(mouseX, mouseY);
+    // squareInside(0, 0);
   }
 
   
 }
 
 
-function mySquares(x, y, w, h) {
+function mySquares(x, y) {
 
   noFill();
   stroke(255);
   rectMode(CENTER);
+  
 
-  w_ = map(mouseX, 0, width/2, w, w+100);
-  h_ = map(mouseX, 0, height/2, h, h+100);
+  w_ = map(mouseX, 0, width, -100, 100);
 
-  rect(x, y, w_, h_);
+
+  rect(x, y, w_, w_);
 
 }
 
